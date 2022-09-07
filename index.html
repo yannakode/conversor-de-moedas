@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="images/favicon2.png" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Conversor de moedas</title>
+</head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<body>
+	<main>
+		<h1>CONVERSOR DE MOEDAS</h1>
+		<section id="content">
+			<div id="valueUser" class="form-group">
+				<label for="valorEmReal">R$</label>
+				<input type="number" name="valorEmReal" id="valorEmReal" class="input" autofocus required value="" step="0.01" min="0.00" max="9999999999.99" tabindex="1" onclick="activateBtn()" onchange="activateBtn()">
+			</div>
+			<div class="form-group">
+				<input type="radio" id="dolar" class="input radio" tabindex="2" name="moedaEstrangeira" value="dolar">
+				<label for="dolar">Dólar</label>
+
+				<input type="radio" id="euro" class="input radio" tabindex="3" name="moedaEstrangeira" value="euro">
+				<label for="euro">Euro</label>
+
+				<input type="radio" id="libra" class="input radio" tabindex="4" name="moedaEstrangeira" value="libra">
+				<label for="libra">Libra</label>
+
+				<input type="radio" id="bitcoin" class="input radio" tabindex="5" name="moedaEstrangeira" value="bitcoin">
+				<label for="bitcoin">Bitcoin</label>
+			</div>
+			<div id="btn">
+				<button class="btn" id="btnConvert" tabindex="6" onclick="blockBtn(); activateBtn()" disabled>Converter</button>
+				<button type="reset" class="btn" id="btnClean" tabindex="7">Limpar</button>
+			</div>
+			<div id="message">
+				<p id="aviso">Digite um valor numérico.</p>
+			</div>
+			<div id="moedas-img">
+				<figure class="img">
+					<img src="moedas/dolar.png" alt="dolar">
+					<img src="moedas/euro.png" alt="euro">
+					<img src="moedas/libra.png" alt="libra">
+					<img src="moedas/bitcoin.png" alt="bitcoin">
+					<img src="moedas/real.png" alt="real">
+				</figure>
+			</div>
+		</section>
+	</main>
+<script src="js/app.js"></script>
+</body>
+</html>
